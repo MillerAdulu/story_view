@@ -76,7 +76,7 @@ class StoryVideoState extends State<StoryVideo> {
     widget.videoLoader.loadVideo(() {
       if (widget.videoLoader.state == LoadState.success) {
         this.playerController =
-            VideoPlayerController.file(widget.videoLoader.videoFile);
+            VideoPlayerController.network(widget.url);
 
         playerController.initialize().then((v) {
           setState(() {});
