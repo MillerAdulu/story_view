@@ -79,9 +79,6 @@ class StoryVideoState extends State<StoryVideo> {
             VideoPlayerController.network(widget.videoLoader.url);
 
         playerController.initialize().then((v) {
-          print("Printing stuff from the side");
-          print(v);
-          print("Finished side stuff");
           setState(() {});
           widget.storyController.play();
         });
