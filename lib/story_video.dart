@@ -80,7 +80,7 @@ class StoryVideoState extends State<StoryVideo> {
 
         playerController.initialize().then((v) {
           print("Cool stuff!");
-          print("Position: ${playerController.value.position}")
+          print("Position: ${playerController.value.position}");
           print("Duration: ${playerController.value.duration}");
           if(playerController.value.initialized)
           widget.storyController.play();
