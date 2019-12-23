@@ -79,7 +79,10 @@ class StoryVideoState extends State<StoryVideo> {
             VideoPlayerController.network(widget.videoLoader.url);
 
         playerController.initialize().then((v) {
-          setState(() {});
+          print("Cool stuff!");
+          print("Position: ${playerController.value.position}")
+          print("Duration: ${playerController.value.duration}");
+          if(playerController.value.initialized)
           widget.storyController.play();
         });
 
